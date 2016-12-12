@@ -16,9 +16,12 @@ antigen bundle zsh-users/zsh-history-substring-search
 # Load the theme.
 #antigen theme robbyrussell
 antigen theme agnoster
-
 DEFAULT_USER=`whoami`
 RPROMPT=$'%F{cyan}%*%f'
+#antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+#BULLETTRAIN_RUBY_SHOW=false
+#BULLETTRAIN_DIR_EXTENDED=0
+#BULLETTRAIN_HG_SHOW=false
 
 # Tell antigen that you're done.
 antigen apply
