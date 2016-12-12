@@ -1,0 +1,8 @@
+export TEXLIVE=${HOME}/local/texlive/2015
+
+#[[ ":$PATH:" =~ ":${TEXLIVE}/bin/x86_64-linux:" ]] || export PATH="${TEXLIVE}/bin/x86_64-linux:$PATH"
+
+#[[ ":$MANPATH:" =~ ":${TEXLIVE}/texmf-dist/doc/man:" ]] || export MANPATH="${TEXLIVE}/texmf-dist/doc/man:$MANPATH"
+#[[ ":$INFOPATH:" =~ ":${TEXLIVE}/texmf-dist/doc/info:" ]] || export INFOPATH="${TEXLIVE}/texmf-dist/doc/info:$INFOPATH"
+
+[[ ":$PATH:" =~ ":${HOME}/programs/miniconda3/bin:" ]] || export PATH="${HOME}/programs/miniconda3/bin:$PATH"

@@ -1,0 +1,28 @@
+# execution 
+#if [ -f ~/.shrc_paths ]; then
+#    . ~/.shrc_paths
+#fi
+
+export EDITOR='nano'
+
+LOCAL_PATH="${HOME}/local"
+STOW_DIR="${HOME}/local/stow"
+
+[[ ":$PKG_CONFIG_PATH:" =~ ":${LOCAL_PATH}/lib/pkgconfig:" ]] || export PKG_CONFIG_PATH="${LOCAL_PATH}/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+[[ ":$LD_LIBRARY_PATH:" =~ ":${LOCAL_PATH}/lib:" ]] || export LD_LIBRARY_PATH="${LOCAL_PATH}/lib:$LD_LIBRARY_PATH"
+
+[[ ":$PATH:" =~ ":${LOCAL_PATH}/bin:" ]] || export PATH="${LOCAL_PATH}/bin:$PATH"
+[[ ":$MANPATH:" =~ ":${LOCAL_PATH}/share/man:" ]] || export MANPATH="${LOCAL_PATH}/share/man:$MANPATH"
+[[ ":$INFOPATH:" =~ ":${LOCAL_PATH}/share/info:" ]] || export INFOPATH="${LOCAL_PATH}/share/info:$INFOPATH"
+
+#export CMAKE_INCLUDE_PATH=${HOME}/local/include
+#export CMAKE_LIBRARY_PATH=${HOME}/local/lib
+[[ ":$CMAKE_PREFIX_PATH:" =~ ":${LOCAL_PATH}:" ]] || export CMAKE_PREFIX_PATH="${LOCAL_PATH}:$CMAKE_PREFIX_PATH"
+
+#export CC=clang
+#export CXX=clang++
+
+#export PATH="${HOME}/.repos/linuxbrew/bin:$PATH"
+#export MANPATH="${HOME}/.repos/linuxbrew/share/man:$MANPATH"
+#export INFOPATH="${HOME}/.repos/linuxbrew/share/info:$INFOPATH"
