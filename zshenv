@@ -1,5 +1,5 @@
 
-ZSHA_BASE=$HOME/.repos/zsh-antigen
+ZSHA_BASE=$HOME/.repos/zsh-config
 
 #source ${0%/*}/shrc_paths
 #source ${0%/*}/shrc_certicon
