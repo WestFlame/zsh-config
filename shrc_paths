@@ -23,6 +23,6 @@ STOW_DIR="${HOME}/local/stow"
 #export CC=clang
 #export CXX=clang++
 
-#export PATH="${HOME}/.repos/linuxbrew/bin:$PATH"
-#export MANPATH="${HOME}/.repos/linuxbrew/share/man:$MANPATH"
-#export INFOPATH="${HOME}/.repos/linuxbrew/share/info:$INFOPATH"
+[[ ":$PATH:" =~ ":${HOME}/.linuxbrew/bin:" ]] || export PATH="${HOME}/.linuxbrew/bin:$PATH"
+[[ ":$MANPATH:" =~ ":${HOME}/.linuxbrew/share/man:" ]] || export MANPATH="${HOME}/.linuxbrew/share/man:$MANPATH"
+[[ ":$INFOPATH:" =~ ":${HOME}/.linuxbrew/share/info:" ]] || export INFOPATH="${HOME}/.linuxbrew/share/info:$INFOPATH"
