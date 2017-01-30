@@ -8,6 +8,13 @@ export EDITOR='nano'
 LOCAL_PATH="${HOME}/local"
 STOW_DIR="${HOME}/local/stow"
 
+[[ ":$PATH:" =~ ":${HOME}/.linuxbrew/bin:" ]] || export PATH="${HOME}/.linuxbrew/bin:$PATH"
+[[ ":$MANPATH:" =~ ":${HOME}/.linuxbrew/share/man:" ]] || export MANPATH="${HOME}/.linuxbrew/share/man:$MANPATH"
+[[ ":$INFOPATH:" =~ ":${HOME}/.linuxbrew/share/info:" ]] || export INFOPATH="${HOME}/.linuxbrew/share/info:$INFOPATH"
+[[ ":$XDG_DATA_DIRS:" =~ ":${HOME}/.linuxbrew/share:" ]] || export XDG_DATA_DIRS="${HOME}/.linuxbrew/share:$XDG_DATA_DIRS"
+
+[[ ":$PATH:" =~ ":${HOME}/.local/bin:" ]] || export PATH="${HOME}/.local/bin:$PATH"
+
 [[ ":$PKG_CONFIG_PATH:" =~ ":${LOCAL_PATH}/lib/pkgconfig:" ]] || export PKG_CONFIG_PATH="${LOCAL_PATH}/lib/pkgconfig:$PKG_CONFIG_PATH"
 
 [[ ":$LD_LIBRARY_PATH:" =~ ":${LOCAL_PATH}/lib:" ]] || export LD_LIBRARY_PATH="${LOCAL_PATH}/lib:$LD_LIBRARY_PATH"
@@ -23,9 +30,3 @@ STOW_DIR="${HOME}/local/stow"
 #export CC=clang
 #export CXX=clang++
 
-[[ ":$PATH:" =~ ":${HOME}/.linuxbrew/bin:" ]] || export PATH="${HOME}/.linuxbrew/bin:$PATH"
-[[ ":$MANPATH:" =~ ":${HOME}/.linuxbrew/share/man:" ]] || export MANPATH="${HOME}/.linuxbrew/share/man:$MANPATH"
-[[ ":$INFOPATH:" =~ ":${HOME}/.linuxbrew/share/info:" ]] || export INFOPATH="${HOME}/.linuxbrew/share/info:$INFOPATH"
-[[ ":$XDG_DATA_DIRS:" =~ ":${HOME}/.linuxbrew/share:" ]] || export XDG_DATA_DIRS="${HOME}/.linuxbrew/share:$XDG_DATA_DIRS"
-
-[[ ":$PATH:" =~ ":${HOME}/.local/bin:" ]] || export PATH="${HOME}/.local/bin:$PATH"
